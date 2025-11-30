@@ -1,0 +1,177 @@
+/* .mywork {
+  padding: 50px 70px;
+} */
+
+/* header */
+.mywork-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.mywork-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mywork-title h1 {
+  font-size: 42px;
+  margin-bottom: 4px;
+  background: linear-gradient(264deg, #ffffff -5.09%, #ffffff 106.28%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mywork-title img {
+  width: 140px;
+  margin-top: -8px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mywork-subtitle {
+  max-width: 520px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* grid */
+.mywork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+}
+
+/* card */
+.mywork-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 30px 28px;       /* bigger padding */
+  min-height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle gradient glow on hover */
+.mywork-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+      rgba(223, 137, 8, 0.22),
+      transparent 55%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mywork-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.85);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.mywork-card:hover::before {
+  opacity: 1;
+}
+
+/* pill badge */
+.mywork-card-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.mywork-pill {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.9;
+}
+
+/* title + text */
+.mywork-card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.mywork-desc {
+  font-size: 0.9rem;
+  opacity: 0.87;
+  margin-bottom: 10px;
+}
+
+.mywork-tech {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+/* buttons */
+.mywork-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  color: #ffffff;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .mywork {
+    padding: 50px 24px;
+  }
+
+  .mywork-header {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .mywork {
+    padding: 40px 18px;
+  }
+
+  .mywork-title h1 {
+    font-size: 32px;
+  }
+}

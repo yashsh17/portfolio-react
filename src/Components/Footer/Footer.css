@@ -1,0 +1,103 @@
+.footer {
+  width: 100%;
+  padding: 40px 0 25px;
+  background: var(--bg);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  color: var(--text);
+}
+
+/* Subscribe */
+.footer-top p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.footer-subscribe input {
+  padding: 12px 18px;
+  width: 240px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: .9rem;
+  background: var(--card);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.footer-subscribe input:hover,
+.footer-subscribe input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+.footer-subscribe button {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(264deg,#DF8908 -5.09%, #B415FF 106.28%);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+  transform: scale(1.05);
+  opacity: .95;
+}
+
+/* Middle line */
+.footer-made {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.footer-made span {
+  font-size: 1.2rem;
+  animation: beat 1.2s infinite;
+}
+
+.footer-made strong {
+  background: linear-gradient(264deg,#DF8908 -5.09%, #B415FF 106.28%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: .9rem;
+  opacity: .8;
+}
+
+/* Heart animation */
+@keyframes beat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-subscribe {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .footer-subscribe input,
+  .footer-subscribe button {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+

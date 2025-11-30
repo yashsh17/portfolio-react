@@ -1,0 +1,222 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  margin: 80px 170px;
+}
+
+/* title */
+.about-title {
+  position: relative;
+}
+
+.about-title h1 {
+  padding: 0 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.about-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* main section */
+.about-sections {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* left side – IMAGE */
+.about-left {
+  flex-shrink: 0;
+  max-width: 280px;
+}
+
+.about-left img {
+  width: 280px;
+  height: 400px;  /* increased */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 4px solid black;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+  
+/* right side */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-para {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-skill p{
+  min-width: 150px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.about-skill hr{
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(264deg,#DF8908 -5.09%, #B415FF 106.28%);
+}
+
+.about-achievement h1{
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(270deg,#DF8908 50.41%,#B415FF 90.25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:  transparent;
+}
+
+.about-achievements{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.about-achievement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+
+.about-achievement p{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.about-skill:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* ===================== */
+/*   RESPONSIVE STYLES   */
+/* ===================== */
+
+/* Tablet: slightly tighter layout */
+@media (max-width: 1024px) {
+  .about {
+    margin: 60px 60px;
+    gap: 50px;
+  }
+
+  .about-sections {
+    gap: 50px;
+  }
+
+  .about-title h1 {
+    font-size: 42px;
+  }
+}
+
+/* Mobile: stack, smaller fonts, centered image */
+@media (max-width: 768px) {
+  .about {
+    margin: 40px 20px;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .about-title h1 {
+    padding: 0;
+    font-size: 32px;
+  }
+
+  .about-title img {
+    width: 120px;
+    right: -10px;
+  }
+
+  .about-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-left {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-left img {
+    width: 70%;
+    max-width: 260px;
+    height: auto;
+  }
+
+  .about-right {
+    gap: 24px;
+  }
+
+  .about-para {
+    font-size: 16px;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .about-skill p{
+    min-width: 120px;
+    font-size: 16px;
+  }
+
+  .about-skill hr{
+    height: 6px;
+  }
+
+  .about-achievements {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .about-achievement h1{
+    font-size: 38px;
+  }
+
+  .about-achievement p{
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+

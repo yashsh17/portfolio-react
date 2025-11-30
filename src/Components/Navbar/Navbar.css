@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+  position: relative;
+}
+
+.nav-logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* MENU LIST - DESKTOP DEFAULT */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-menu li img {
+  margin: auto;
+}
+
+/* BUTTON ON RIGHT */
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS WHITE */
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Also ensure li content is white */
+.nav-menu li a,
+.nav-menu li p {
+  color: white;
+}
+
+/* MOBILE ICONS - HIDDEN BY DEFAULT */
+.nav-mob-open,
+.nav-mob-close {
+  display: none;
+}
+
+/* ------------- RESPONSIVE ------------- */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 30px;
+  }
+
+  /* Hide right-side button on mobile */
+  .nav-connect {
+    display: none;
+  }
+
+  /* Mobile menu open icon (hamburger) */
+  .nav-mob-open {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  /* NAV MENU BECOMES SIDEBAR */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -320px; /* hidden initially */
+    height: 100vh;
+    width: 260px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 80px;
+    padding-left: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+
+  /* when active (toggle true) */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Close icon inside sidebar */
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    cursor: pointer;
+  }
+}
+
+
